@@ -17,15 +17,20 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+# Opt into Node.js 24 for JS-based actions until all publish Node 24-native releases
+# (see https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/)
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
 
       - run: npm ci
@@ -33,7 +38,7 @@ jobs:
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
