@@ -3,6 +3,13 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 
+/** Static files in public/ — must respect Vite base (e.g. GitHub project Pages → /repo/). */
+function publicUrl(path) {
+  const base = import.meta.env.BASE_URL;
+  const p = path.startsWith("/") ? path.slice(1) : path;
+  return `${base}${p}`;
+}
+
 const projects = [
   {
     category: "Mobile App",
@@ -12,7 +19,7 @@ const projects = [
     technologies: ["Django", "Flutter", "PostgreSQL", "Docker", "AWS"],
     github: null,
     live: "https://apps.apple.com/sa/app/unitok-app/id6745688652",
-    image: "/projects/unitok.jpg",
+    image: publicUrl("/projects/unitok.jpg"),
     imageClass: "object-contain object-top p-2 md:p-3",
     imageNoZoom: true,
     imageIndex: 0,
@@ -25,7 +32,7 @@ const projects = [
     technologies: ["Laravel", "Flutter", "PostgreSQL", "HealthKit", "Ollama"],
     github: null,
     live: null,
-    image: "/projects/rewaqx.jpg",
+    image: publicUrl("/projects/rewaqx.jpg"),
     imageIndex: 1,
   },
   {
@@ -36,7 +43,7 @@ const projects = [
     technologies: ["SwiftUI", "SwiftData", "VoiceOver", "Accessibility", "MVVM"],
     github: null,
     live: null,
-    image: "/projects/righthand.jpg",
+    image: publicUrl("/projects/righthand.jpg"),
     imageIndex: 2,
   },
   {
@@ -47,7 +54,7 @@ const projects = [
     technologies: ["SwiftUI", "Sketch", "Local Notifications"],
     github: "https://github.com/Lojaen3/plantsApp",
     live: null,
-    image: "/projects/planto.jpg",
+    image: publicUrl("/projects/planto.jpg"),
     imageIndex: 3,
   },
   {
@@ -58,7 +65,7 @@ const projects = [
     technologies: ["Sketch", "SwiftUI"],
     github: "https://github.com/Lojaen3/Cyclash",
     live: null,
-    image: "/projects/cyclash.jpg",
+    image: publicUrl("/projects/cyclash.jpg"),
     imageIndex: 4,
   },
   {
@@ -69,7 +76,7 @@ const projects = [
     technologies: ["Laravel", "HTML", "CSS", "JavaScript", "phpMyAdmin", "Bootstrap"],
     github: null,
     live: null,
-    image: "/projects/borikat.jpg",
+    image: publicUrl("/projects/borikat.jpg"),
     imageIndex: 5,
   },
   {
@@ -80,7 +87,7 @@ const projects = [
     technologies: ["Node.js", "MongoDB", "Email Service Integration"],
     github: null,
     live: null,
-    image: "/projects/travel-roommate.jpg",
+    image: publicUrl("/projects/travel-roommate.jpg"),
     imageIndex: 6,
   },
 ];

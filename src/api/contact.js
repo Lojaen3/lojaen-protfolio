@@ -62,6 +62,7 @@ export async function createContactMessage({ name, email, message }) {
   }
 
   throw new Error(
-    "Add VITE_WEB3FORMS_ACCESS_KEY (web3forms.com), or VITE_FORMSPREE_FORM_ID, or VITE_CONTACT_EMAIL in your .env file."
+    "Contact form is not configured. Locally: add VITE_WEB3FORMS_ACCESS_KEY (or VITE_FORMSPREE_FORM_ID / VITE_CONTACT_EMAIL) to .env. " +
+      "On GitHub Pages: add the same names as repository secrets (Settings → Secrets and variables → Actions), then redeploy."
   );
 }

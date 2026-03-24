@@ -29,9 +29,13 @@ jobs:
           cache: npm
 
       - run: npm ci
+      # Same names as .env — add repo Secrets: Settings → Secrets and variables → Actions
       - run: npm run build
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
+          VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
+          VITE_FORMSPREE_FORM_ID: ${{ secrets.VITE_FORMSPREE_FORM_ID }}
+          VITE_CONTACT_EMAIL: ${{ secrets.VITE_CONTACT_EMAIL }}
 
       # Same archive as actions/upload-pages-artifact, but upload-artifact@v6 is Node 24
       # (upload-pages-artifact@v4 still pins upload-artifact@v4.6.2 / Node 20).
