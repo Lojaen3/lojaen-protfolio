@@ -12,7 +12,6 @@ function publicUrl(path) {
 
 const projects = [
   {
-    category: "Mobile App",
     title: "UniTok",
     description:
       "UniTok is a university-focused social platform designed to connect students, showcase achievements, and turn campus life into real opportunities. It empowers students to express themselves, engage with their community, and grow through meaningful interactions, recognition, and shared experiences.",
@@ -25,7 +24,6 @@ const projects = [
     imageIndex: 0,
   },
   {
-    category: "Mobile App",
     title: "Rewaqx",
     description:
       "Rewaq x is a platform that makes workplaces more connected, supportive, and positive. It helps teams communicate better, recognize each other's efforts, and build a culture that supports mental health, well-being, and strong relationships.",
@@ -36,7 +34,6 @@ const projects = [
     imageIndex: 1,
   },
   {
-    category: "Mobile App",
     title: "RightHand",
     description:
       "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
@@ -47,7 +44,6 @@ const projects = [
     imageIndex: 2,
   },
   {
-    category: "Mobile App",
     title: "Planto",
     description:
       "Planto is an iOS app created to simplify plant care by helping users track, water, and care for their plants with automated reminders.",
@@ -58,7 +54,6 @@ const projects = [
     imageIndex: 3,
   },
   {
-    category: "Mobile App",
     title: "Cyclash",
     description:
       "CycLash is a challenge-based cycling app that motivates users to stay active through challenges and progress tracking.",
@@ -69,7 +64,6 @@ const projects = [
     imageIndex: 4,
   },
   {
-    category: "WebSite",
     title: "Borikat",
     description:
       "An all-in-one tourism guide for Madina that helps visitors and residents discover landmarks, activities, and entertainment. It makes trip planning easier and highlights the city's rich culture and heritage.",
@@ -80,7 +74,6 @@ const projects = [
     imageIndex: 5,
   },
   {
-    category: "WebSite",
     title: "Travel Roommate",
     description:
       "A web-based platform that connects travelers seeking travel companions based on destination selection. Users can choose a country, view available travelers, and send travel requests through the system. Implemented backend logic to manage user data, travel requests, and email notifications.",
@@ -122,14 +115,6 @@ function ProjectCard({ project, index, images = [] }) {
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-
-          {project.category && (
-            <div className="absolute top-4 left-4">
-              <span className="inline-block px-3 py-1 text-xs font-mono font-medium text-primary bg-primary/15 border border-primary/25 rounded-md">
-                {project.category}
-              </span>
-            </div>
-          )}
 
           {/* Links overlay */}
           {hasLinks && (
