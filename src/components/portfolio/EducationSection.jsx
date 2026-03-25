@@ -12,7 +12,8 @@ const education = {
     "Operating Systems",
     "Software Architecture",
     "Database Management Systems",
-    "Machine Learning",
+    "Software Construction",
+    "Software Testing",
     "Computer Networks",
   ],
 };

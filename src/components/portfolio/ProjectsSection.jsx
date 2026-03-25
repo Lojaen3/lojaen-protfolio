@@ -36,8 +36,16 @@ const projects = [
   {
     title: "RightHand",
     description:
-      "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    technologies: ["SwiftUI", "SwiftData", "VoiceOver", "Accessibility", "MVVM"],
+      "RightHand aims to improve the quality of life for blind and visually impaired individuals by helping them understand their surroundings and identify objects using smart technologies and a user-friendly interface that supports both Arabic and English.",
+    technologies: [
+      "SwiftUI",
+      "SwiftData",
+      "VoiceOver",
+      "Accessibility",
+      "Camera",
+      "Core ML",
+      "MVVM",
+    ],
     github: null,
     live: null,
     image: publicUrl("/projects/righthand.jpg"),
@@ -82,6 +90,16 @@ const projects = [
     live: null,
     image: publicUrl("/projects/travel-roommate.jpg"),
     imageIndex: 6,
+  },
+  {
+    title: "Unitok Website",
+    description:
+      "A responsive landing page website for UniTok.",
+    technologies: ["Node.js", "Express", "HTML", "CSS", "JavaScript"],
+    github: null,
+    live: null,
+    image: publicUrl("/projects/unitok-website.jpg"),
+    imageIndex: 7,
   },
 ];
 
