@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, FileText } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -28,6 +28,15 @@ export default function Footer() {
             aria-label="LinkedIn"
           >
             <Linkedin className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1RwM7-e9rTawxNw3e_xWMOmUGA69mLQHk/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-primary/10 transition-colors focus:outline-2 focus:outline-primary"
+            aria-label="Resume"
+          >
+            <FileText className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
           </a>
           <a
             href="mailto:lojaenayash@gmail.com"

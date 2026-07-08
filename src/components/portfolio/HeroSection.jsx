@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, ExternalLink } from "lucide-react";
+import { ArrowDown, ExternalLink, FileText } from "lucide-react";
 
 export default function HeroSection({ heroImage }) {
   return (
@@ -78,10 +78,13 @@ export default function HeroSection({ heroImage }) {
               <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="#contact"
+              href="https://drive.google.com/file/d/1RwM7-e9rTawxNw3e_xWMOmUGA69mLQHk/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 border border-border text-foreground font-medium rounded-xl hover:bg-primary/5 hover:border-primary/30 transition-all focus:outline-2 focus:outline-primary focus:outline-offset-2"
             >
-              Contact Me
+              View Resume
+              <FileText className="w-4 h-4" />
             </a>
           </motion.div>
         </motion.div>
